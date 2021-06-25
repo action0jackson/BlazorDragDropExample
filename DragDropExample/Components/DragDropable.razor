@@ -1,0 +1,20 @@
+﻿<div class="col-lg-12">
+    <fieldset class="border p-2 mb-2">
+        <legend class="w-auto">@Name</legend>
+        <Dropzone Items="Items" TItem="Item">
+            @if (context.Children.Any())
+            {
+                <DragDropable Name="@context.Name" Items="@context.Children" />
+            }
+            else
+            {
+
+                <li class="field nav-item px-3 list-group-item">
+                    <div class="col-lg-12">
+                        <span style="margin-left: 10px; font-weight:bold;">@context.Name</span>
+                    </div>
+                </li>
+            }
+        </Dropzone>
+    </fieldset>
+</div>
